@@ -1,8 +1,12 @@
 const express = require('express')
 const app = express()
-const PORT = 8080
+
+require('dotenv').config()
+const PORT = process.env.PORT
+
 const { dbConnection } = require('./config/db')
-const routes = require('./routes');
+
+const productRoutes = require('./routes/productRoutes');
 //const swaggerUI = require('swagger-ui-express')
 //const docs = require('./docs/index')
 
@@ -10,7 +14,7 @@ const routes = require('./routes');
 
 app.use(express.json());
 
-app.use('/', routes);
+app.use('/', productRoutes);
 
 dbConnection()
 
