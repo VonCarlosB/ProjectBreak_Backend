@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const app = express()
 
 require('dotenv').config()
@@ -12,9 +13,11 @@ const productRoutes = require('./routes/productRoutes');
 
 //app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(docs))
 
-app.use(express.json());
+app.use(cors())
+app.use(express.static(__dirname + "/public"))
+app.use(express.json())
 
-app.use('/', productRoutes);
+app.use('/', productRoutes)
 
 dbConnection()
 

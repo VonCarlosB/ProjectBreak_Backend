@@ -1,0 +1,28 @@
+.navBar{
+    display: flex;
+    justify-content: center;
+    background-color: beige;
+    height: 50px;
+    gap: 10px;
+}
+.navBar p:hover{
+    background-color: orange;
+    cursor: pointer;
+}
+.contenedor{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+.product{
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: lightgrey;
+    padding: 10px;
+}
+.productName{
+    text-align: center;
+}

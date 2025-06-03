@@ -1,5 +1,5 @@
 const Product = require('../models/Product')
-const { mostrarProductos } = require('../helpers/baseHTML')
+const { mostrarProductos, mostrarDetalle } = require('../helpers/baseHTML')
 
 const ProductController = {
     async showProducts(req, res) {
@@ -14,7 +14,7 @@ const ProductController = {
     async showProductById(req, res) {
         try {
             const product = await Product.findById(req.params.productId)
-            res.json(product)
+            res.send(mostrarDetalle(product))
         } catch (error) {
             console.log('Could not get product, because of:')
             console.error(error)
@@ -34,13 +34,14 @@ const ProductController = {
     async createProduct(req, res){
         try {
         const product = await Product.create({
-            nombre: req.body.name,
-            descripcion: req.body.description,
-            imagen: req.body.image,
-            categoria: req.body.category,
-            talla: req.body.size,
-            precio: req.body.price
+            nombre: req.body.nombre,
+            descripcion: req.body.descripcion,
+            imagen: req.body.imagen,
+            categoria: req.body.categoria,
+            talla: req.body.talla,
+            precio: req.body.precio
         })
+        res.json(product)
         } catch (error) {
             console.log('Could not create product, because of:')
             console.error(error)
