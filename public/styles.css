@@ -1,12 +1,21 @@
 .navBar{
     display: flex;
     justify-content: center;
-    background-color: beige;
+    align-items: center;
+    background-color: lightcyan;
     height: 50px;
-    gap: 10px;
+    gap: 10%;
+    margin: 20px;
+}
+.navBar p{
+    height: 20px;
+    padding: 5px;
+    text-align: center;
+    align-content: center;
 }
 .navBar p:hover{
-    background-color: orange;
+    border-radius: 5px;
+    background-color: lightpink;
     cursor: pointer;
 }
 .contenedor{
@@ -25,4 +34,53 @@
 }
 .productName{
     text-align: center;
+}
+
+.imageContainer{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.imageContainer img{
+    height: 100%;
+}
+
+form{
+    width: 33%;
+    margin: auto;
+    padding: 20px;
+    background-color: azure;
+}
+
+label{
+    margin-right: 10px;
+    text-align: center;
+    font-size: large;
+}
+
+input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+    margin-bottom: 20px;
+}
+
+select{
+    margin-bottom: 20px;
+}
+
+#size{
+    margin-left: 34px;
+}
+
+form button{
+    width: 20%;
+    height: 30px;
+    min-width: 100px;
 }

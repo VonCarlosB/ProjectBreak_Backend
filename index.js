@@ -5,7 +5,7 @@ const app = express()
 require('dotenv').config()
 const PORT = process.env.PORT
 
-const { dbConnection } = require('./config/db')
+const dbConnection = require('./config/db')
 
 const productRoutes = require('./routes/productRoutes');
 //const swaggerUI = require('swagger-ui-express')
@@ -16,6 +16,7 @@ const productRoutes = require('./routes/productRoutes');
 app.use(cors())
 app.use(express.static(__dirname + "/public"))
 app.use(express.json())
+app.use(express.urlencoded({ extended:true }))
 
 app.use('/', productRoutes)
 
