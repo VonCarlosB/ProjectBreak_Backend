@@ -15,6 +15,7 @@ const htmlEnd = `</body></html>`
 const navBar = (admin) => {
     let ans = `
         <nav class="navBar">
+        <p><a href="${admin ? "/dashboard" : "/products"}">Ver todos</a></p>
             ${categories.map(category => `<p>${category}</p>`).join("")}
         
     `

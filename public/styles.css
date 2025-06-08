@@ -1,15 +1,17 @@
 *{
     font-family: Arial;
     color: black;
+    margin: 0;
+    padding: 0;
 }
 .navBar{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: lightcyan;
-    height: 50px;
-    gap: 10%;
-    margin: 20px;
+    height: 70px;
+    gap: 5%;
+    margin: 0 20px;
 }
 .navBar p{
     height: 20px;
@@ -19,7 +21,7 @@
 }
 .navBar p:hover{
     border-radius: 5px;
-    background-color: lightpink;
+    background-color: #ededed;
     cursor: pointer;
 }
 a{
@@ -31,16 +33,22 @@ a{
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
+    margin-top: 40px;
+    padding: 0px 20px;
 }
 .product{
     width: 200px;
     border: 1px solid black;
     border-radius: 15px;
-    background-color: lightgrey;
+    background-color: #ededed;
     padding: 10px;
+}
+.product p{
+    margin: 10px 0px;
 }
 .productName{
     text-align: center;
+    margin-bottom: 10px;
 }
 .productDescription{
     width: 100%;
@@ -59,7 +67,7 @@ a{
 
 form{
     width: 33%;
-    margin: auto;
+    margin: 20px auto;
     padding: 20px;
     background-color: azure;
 }
@@ -72,12 +80,14 @@ label{
 
 input{
     width: 100%;
+    margin-top: 5px;
     margin-bottom: 20px;
 }
 
 textarea{
     width: 100%;
     resize: none;
+    margin-top: 5px;
     margin-bottom: 20px;
 }
 

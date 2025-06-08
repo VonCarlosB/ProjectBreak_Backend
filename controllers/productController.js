@@ -69,7 +69,6 @@ const ProductController = {
 
     async updateProduct(req, res){
         try {
-            console.log(req.body)
             const {nombre, descripcion, categoria, talla, precio} = req.body
             if(req.file != undefined){
                 const imagen = req.file.path
