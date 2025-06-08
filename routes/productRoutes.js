@@ -6,6 +6,7 @@ const multer = require('multer')
 const storage = require('../utils/cloudinary')
 const upload = multer({ storage })
 
+router.get('/', (req, res) => res.redirect('/products'))
 router.get('/products', ProductController.showProducts)
 router.get('/products/:productId', ProductController.showProductById)
 router.get('/dashboard', ProductController.getDashboard)
