@@ -1,13 +1,14 @@
 const express = require('express')
 const cors = require('cors')
+const dbConnection = require('./config/db')
+const productRoutes = require('./routes/productRoutes');
+const methodOverride = require('method-override')
+require('dotenv').config()
+
 const app = express()
 
-require('dotenv').config()
 const PORT = process.env.PORT
 
-const dbConnection = require('./config/db')
-
-const productRoutes = require('./routes/productRoutes');
 //const swaggerUI = require('swagger-ui-express')
 //const docs = require('./docs/index')
 
@@ -17,6 +18,7 @@ app.use(cors())
 app.use(express.static(__dirname + "/public"))
 app.use(express.json())
 app.use(express.urlencoded({ extended:true }))
+app.use(methodOverride('_method'))
 
 app.use('/', productRoutes)
 
