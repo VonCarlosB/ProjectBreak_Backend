@@ -22,7 +22,7 @@ const navBar = (admin) => {
     if(admin){
         ans += '<p><a href="/dashboard/new">Añadir producto</a></p>'
     }else{
-        ans += '<p><a href="/dashboard">Log in</a></p>'
+        ans += '<p><a href="/dashboard">Acceder</a></p>'
     }
     ans += '</nav>'
     return ans

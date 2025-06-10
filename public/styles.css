@@ -11,7 +11,6 @@
     background-color: lightcyan;
     height: 70px;
     gap: 5%;
-    margin: 0 20px;
 }
 .navBar p{
     height: 20px;
@@ -70,10 +69,11 @@ a{
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-evenly;
+    gap: 10px;
 }
 
 .botonera button{
-    width: 40%;
+    width: 50%;
     height: 30px;
 }
 
@@ -111,7 +111,7 @@ select{
     margin-left: 34px;
 }
 
-form button{
+.formulario button{
     width: 20%;
     height: 30px;
     min-width: 100px;
