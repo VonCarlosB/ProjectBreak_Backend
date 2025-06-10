@@ -65,7 +65,19 @@ a{
     height: 100%;
 }
 
-form{
+.botonera{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.botonera button{
+    width: 40%;
+    height: 30px;
+}
+
+.formulario{
     width: 33%;
     margin: 20px auto;
     padding: 20px;

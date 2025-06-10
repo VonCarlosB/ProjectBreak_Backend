@@ -44,7 +44,7 @@ const showProduct = (product, admin) => {
 
 const details = (product, admin) => {
     if(admin){
-        return `<div class=product><a href="/dashboard/${product._id}/edit">
+        return `<div class=product>
             <h3 class="productName">${product.nombre}</h3>
             <p class="productDescription">${product.descripcion}</p>
             <div class="imageContainer">
@@ -53,7 +53,10 @@ const details = (product, admin) => {
             <p class="productCategory">Categoría: ${product.categoria}</p>
             <p class="productSize">Talla: ${product.talla}</p>
             <p class="productPrice">Precio: ${product.precio}€</p>
-            </a></div>`
+            <form class="botonera" action="/dashboard/${product._id}/delete?_method=DELETE" method="post">
+                <button><a href="/dashboard/${product._id}/edit">Editar</a></button>
+                <button type="submit">Eliminar</button>
+            </form></div>`
     }else{
         return `<div class=product>
             <h3 class="productName">${product.nombre}</h3>
@@ -70,7 +73,7 @@ const details = (product, admin) => {
 
 const form = (product) => {
     if(product){
-        return `<form action="/dashboard/${product._id}?_method=PUT" method="post" enctype="multipart/form-data">
+        return `<form class="formulario" action="/dashboard/${product._id}?_method=PUT" method="post" enctype="multipart/form-data">
             <label for="nombre">Nombre: </label>
             <input type="text" name="nombre" id="nombre" required value="${product.nombre}">
             <br>
@@ -102,7 +105,7 @@ const form = (product) => {
             <button type="submit">Editar</button>
         </form>`
     }else{
-        return `<form action="/dashboard" method="post" enctype="multipart/form-data">
+        return `<form class="formulario" action="/dashboard" method="post" enctype="multipart/form-data">
             <label for="nombre">Nombre: </label>
             <input type="text" name="nombre" id="nombre" required>
             <br>
