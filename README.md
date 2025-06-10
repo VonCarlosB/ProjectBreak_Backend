@@ -3,6 +3,8 @@
 ## Índice
   - [Advertencias](#Advertencias)
   - [Acceso a través de la web visual](#Acceso-a-través-de-la-web-visual)
+  - [Acceso a la API](#Acceso-a-la-API)
+  - [Tecnologías empleadas](#Tecnologías-empleadas)
 
 ## Advertencias
   - Este es un proyecto en desarrollo. Algunos aspectos de la web pueden no ser totalmente funcionales, como la separación por categorías de las prendas de ropa.
@@ -11,10 +13,15 @@
 
 ## Acceso a través de la web visual
 Para acceder a la interfaz visual lo haremos a través del enlace https://projectbreak-backend-4cll.onrender.com
+
 Aquí podremos ver los elementos que componen la base de datos. Al hacer click en la sección de `Más detalles...` accederemos al detalle del producto en particular.
+
 Para poder acceder a más funcionalidades deberemos iniciar a través del enlace del menú superior `Acceder`.
+
 El dashboard se ve igual que el apartado inicial pero ahora, al acceder a los detalles de un producto se puede editar dicho producto a través de un formulario o eliminarlo directamente.
+
 Además, para añadir un nuevo producto a la base de datos, se hará a través de un formulario al que se puede acceder pulsando sobre `Añadir producto` en el menú superior.
+
 ### Resumen URLs
   - https://projectbreak-backend-4cll.onrender.com/products : Acceso público de lectura a la base de datos.
   - https://projectbreak-backend-4cll.onrender.com/products/:productId : Acceso público de lectura a los detalles de un producto concreto de la base de datos.
@@ -32,3 +39,12 @@ Se puede acceder a la base de datos a través de código con respuestas en forma
   - `categoria`: Un texto de los siguientes [`Camisetas`, `Pantalones`, `Zapatos`, `Accesorios`]
   - `talla`: Un texto de los siguientes [`XS`, `S`, `M`, `L`, `XL`]
   - `precio`: Un número con el precio del producto
+
+### Resumen URLs API
+  - https://projectbreak-backend-4cll.onrender.com/api/products : Devuelve todos los productos de la base de datos.
+  - https://projectbreak-backend-4cll.onrender.com/api/products/:productId : Devuelve un producto concreto de la base de datos.
+  - https://projectbreak-backend-4cll.onrender.com/api/create : Permite crear un nuevo producto en la base de datos.
+  - https://projectbreak-backend-4cll.onrender.com/api/update/:productId : Permite actualizar un producto concreto de la base de datos.
+  - https://projectbreak-backend-4cll.onrender.com/api/delete/:productId : Permite eliminar un producto concreto de la base de datos.
+
+## Tecnologías empleadas
