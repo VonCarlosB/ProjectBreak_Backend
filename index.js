@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const dbConnection = require('./config/db')
 const productRoutes = require('./routes/productRoutes');
+const apiRoutes = require('./routes/apiRoutes')
 const methodOverride = require('method-override')
 require('dotenv').config()
 
@@ -20,7 +21,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended:true }))
 app.use(methodOverride('_method'))
 
-app.use('/', productRoutes)
+app.use('/', productRoutes, apiRoutes)
 
 dbConnection()
 
