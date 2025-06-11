@@ -5,6 +5,7 @@
   - [Acceso a través de la web visual](#Acceso-a-través-de-la-web-visual)
   - [Acceso a la API](#Acceso-a-la-API)
   - [Tecnologías empleadas](#Tecnologías-empleadas)
+  - [Deploy](#Deploy)
 
 ## Advertencias
   - Este es un proyecto en desarrollo. Algunos aspectos de la web pueden no ser totalmente funcionales, como la separación por categorías de las prendas de ropa.
@@ -48,3 +49,19 @@ Se puede acceder a la base de datos a través de código con respuestas en forma
   - https://projectbreak-backend-4cll.onrender.com/api/delete/:productId : Permite eliminar un producto concreto de la base de datos.
 
 ## Tecnologías empleadas
+  - express para levantar el servidor.
+  - dotenv para gestionar variables de entorno.
+  - mongoose y mongodb para gestionar la conexión a la base de datos.
+  - cors para permitir conexiones diferentes.
+  - method-override para enviar datos de formulario con los métodos PUT y DELETE.
+  - multer-storage-cloudinary, multer y cloudinary para gestionar las imágenes de los productos.
+
+## Deploy
+Para utilizar el código de este proyecto deberá descargarse en una carpeta y comenzar ejecutando el comando `npm i` para instalar las dependencias de los paquetes de Node.
+
+A continuación se debe crear un archivo .env donde se deben colocar las variables de entorno como son:
+  - MONGO_URI : Un texto con la dirección de conexión a la base de datos.
+  - PORT : El puerto en el que se pretende lanzar el servicio.
+  - CLOUDINARY_NAME, CLOUDINARY_API_KEY y CLUDINARY_SECRET : Variables del entorno de cloudinary.
+
+Por último se ejecutará el comando `npm start` que ejecutará el servicio en local en el puerto establecido en la variable PORT.
