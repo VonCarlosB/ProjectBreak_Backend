@@ -3,10 +3,14 @@ const cors = require('cors')
 const dbConnection = require('./config/db')
 const productRoutes = require('./routes/productRoutes');
 const apiRoutes = require('./routes/apiRoutes')
+const authRoutes = require('./routes/authRoutes')
+const authMidleware = require('./middlewares/authMiddleware')
 const methodOverride = require('method-override')
 require('dotenv').config()
 
 const app = express()
+
+authMidleware.setupAPP(app)
 
 const PORT = process.env.PORT
 
@@ -21,7 +25,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended:true }))
 app.use(methodOverride('_method'))
 
-app.use('/', productRoutes, apiRoutes)
+app.use('/', authRoutes, productRoutes, apiRoutes)
 
 dbConnection()
 

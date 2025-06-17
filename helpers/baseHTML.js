@@ -20,9 +20,10 @@ const navBar = (admin) => {
         
     `
     if(admin){
-        ans += '<p><a href="/dashboard/new">Añadir producto</a></p>'
+        ans += `<p><a href="/dashboard/new">Añadir producto</a></p>
+                <p><a href="/logout">Desconectar</a></p>`
     }else{
-        ans += '<p><a href="/dashboard">Acceder</a></p>'
+        ans += '<p><a href="/auth">Acceder</a></p>'
     }
     ans += '</nav>'
     return ans
